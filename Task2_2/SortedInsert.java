@@ -4,15 +4,13 @@
 package Task2_2;
 
 import java.util.Scanner;
-import Task2.LinkedList;
-import Task2.Iteration;
-import Task2.Node;
 
 public class SortedInsert {
+/*
     public static void main(String[] args) {
         int max = 20, j = 1, m, x;
         Scanner input = new Scanner(System.in);
-        LinkedList list = new LinkedList();
+        LinkedListX list = new LinkedListX();
         Iteration itr = new Iteration(list);
 
         System.out.print("Input of " + max + " numbers between 0 and 100.\n");
@@ -64,4 +62,5 @@ public class SortedInsert {
         }
         lt.insert(x);
     }
+*/
 }

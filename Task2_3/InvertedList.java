@@ -6,18 +6,16 @@
 
 package Task2_3;
 
-import Task2.Iteration;
-import Task2.LinkedList;
 import java.util.Scanner;
 
 public class InvertedList {
-
+/*
     public static int size;
 
     public static void main(String[] args) {
         int a = 1, temp;
         Scanner input = new Scanner(System.in);
-        LinkedList list = new LinkedList();
+        LinkedListX list = new LinkedListX();
         Iteration itr = new Iteration(list);
 
         System.out.print("Number of elements in the List: ");
@@ -52,4 +50,5 @@ public class InvertedList {
         return lt;
     }
     // WIP
+*/
 }

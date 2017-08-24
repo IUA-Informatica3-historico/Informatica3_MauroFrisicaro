@@ -3,59 +3,62 @@
 
 package Task2_1;
 
-import Task2.LinkedList;
-import Task2.Iteration;
-
 import java.util.Scanner;
+import Task2.LinkedList;
 
 public class MergeList {
     public static void main(String[] args) {
-        int a, b, c, temp;
+
+        int size1, size2, counter, temp;
         Scanner input = new Scanner(System.in);
         LinkedList list1 = new LinkedList();
         LinkedList list2 = new LinkedList();
-        Iteration itr1 = new Iteration(list1);
-        Iteration itr2 = new Iteration(list2);
+        LinkedList list3;
 
         System.out.print("Number of elements in the First List: ");
-        a = input.nextInt();
+        size1 = input.nextInt();
         System.out.print("Number of elements in the Second List: : ");
-        b = input.nextInt();
+        size2 = input.nextInt();
 
         System.out.print("\nList 1\n");
-        c = 1;
-        for (int i = 0; i < a; i++) {
-            System.out.printf("Element [%d]: ", c);
+        counter = 1;
+        for (int i = 0; i < size1; i++) {
+            System.out.printf("Element [%d]: ", counter);
             temp = input.nextInt();
-            itr1.insert(temp);
-            c++;
+            list1.insert(temp);
+            counter++;
         }
 
         System.out.print("\nList 2\n");
-        c = 1;
-        for (int i = 0; i < b; i++) {
-            System.out.printf("Element [%d]: ", c);
+        counter = 1;
+        for (int i = 0; i < size2; i++) {
+            System.out.printf("Element [%d]: ", counter);
             temp = input.nextInt();
-            itr2.insert(temp);
-            c++;
+            list2.insert(temp);
+            counter++;
         }
 
         System.out.print("\nNew Merged List: ");
-        concatene(itr1, itr2);
-        itr1.print(list1);
+        list3 = concatenate(list1, list2);
+        list3.print(list3);
     }
 
-    public static void concatene(Iteration l1, Iteration l2) {
-        while (l1.actual.next != null) {
-            l1.goNext();
+    public static LinkedList concatenate(LinkedList l1, LinkedList l2) {
+        LinkedList l3 = new LinkedList();
+
+        while(!l1.isNextNull()){
+            l3.insert(l1.getActualData());
+            l3.goNext();
         }
 
         l2.zero();
         l2.goNext();
 
-        while (l2.actual != null) {
-            l1.insert(l2.actual.data);
-            l2.goNext();
+        while(!l2.isNextNull()){
+            l3.insert(l2.getActualData());
+            l3.goNext();
         }
+
+        return l3;
     }
 }
