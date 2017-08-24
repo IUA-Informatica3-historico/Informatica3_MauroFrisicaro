@@ -12,7 +12,7 @@ public class ParseInt {
 
         System.out.print("Write a Number: ");
         number = input.nextInt();
-
+        number = Math.abs(number);
         parse(number);
     }
 

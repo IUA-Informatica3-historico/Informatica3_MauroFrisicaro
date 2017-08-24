@@ -2,30 +2,28 @@
 
 package Task2_4;
 
+import Task2.LinkedList;
 import java.util.Scanner;
 
 public class MergeListOriginal {
-/*
     public static void main(String[] args) {
         int n, m, j, temp;
-        Scanner entrada = new Scanner(System.in);
-        LinkedListX list1 = new LinkedListX();
-        LinkedListX list2 = new LinkedListX();
-        Iteration itr1 = new Iteration(list1);
-        Iteration itr2 = new Iteration(list2);
+        Scanner input = new Scanner(System.in);
+        LinkedList list1 = new LinkedList();
+        LinkedList list2 = new LinkedList();
 
         System.out.print("Number of elements in the First List: ");
-        n = entrada.nextInt();
+        n = input.nextInt();
         System.out.print("Number of elements in the Second List: ");
-        m = entrada.nextInt();
+        m = input.nextInt();
         j = 1;
 
         System.out.println("\nList 1:\n");
 
         for (int i = 0; i < n; i++) {
             System.out.printf("Number [%d]: ", j);
-            temp = entrada.nextInt();
-            itr1.insert(temp);
+            temp = input.nextInt();
+            list1.insert(temp);
             j++;
         }
 
@@ -33,18 +31,19 @@ public class MergeListOriginal {
         j = 1;
 
         for (int i = 0; i < m; i++) {
-            System.out.printf("N�mero [%d]: ", j);
-            temp = entrada.nextInt();
-            itr2.insert(temp);
+            System.out.printf("Number [%d]: ", j);
+            temp = input.nextInt();
+            list2.insert(temp);
             j++;
         }
 
-        Iteration nuevalist = new Iteration(union(itr1, itr2));
+//        LinkedList nuevalist = new LinkedList(union(list1, list2));
         System.out.print("\nList Unida: ");
-        nuevalist.print(nuevalist.list);
+//        nuevalist.print(nuevalist);
     }
 
-    public static LinkedListX union(Iteration l1, Iteration l2) {
+    public static LinkedList union(LinkedList l1, LinkedList l2) {
+        /*
         Node temp;
         LinkedListX listUnida = new LinkedListX();
         Iteration listUnidaItr = new Iteration(listUnida);
@@ -91,6 +90,7 @@ public class MergeListOriginal {
         }
 
         return listUnida;
+        */
+        return l1;
     }
-*/
 }

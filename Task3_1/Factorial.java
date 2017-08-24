@@ -20,7 +20,7 @@ public class Factorial {
         factNum(number);
     }
 
-    private static int factNum(int n) {
+    private static long factNum(int n) {
         System.out.println();
 
         if (n == 1) {
@@ -34,7 +34,7 @@ public class Factorial {
 
         System.out.println(n);
 
-        int result = factNum(n - 1) * n;
+        long result = factNum(n - 1) * n;
 
         for (int i = 0; i < (n - 1); i++) {
             System.out.print("\t");

@@ -16,16 +16,16 @@ public class BinaryCounter {
         }
         while (number < 0);
 
-        System.out.println();
         System.out.println("\nThe amount of 1s on the number in binary is: " + bnCt(number));
     }
 
-    static int bnCt(int n) {
+    private static int bnCt(int n) {
         if (n < 2) {
+//            System.out.print(n % 2);
             return n;
         } else {
-            return bnCt(n / 2) + bnCt(n % 2);
+            System.out.print(n % 2);
+//            return bnCt(n / 2) + (n % 2);
         }
-
     }
 }

@@ -33,14 +33,25 @@ public class InvertedArray {
 
         System.out.println("\nThe Flipped Array.");
         flipArr(array, array.length);
+        System.out.println();
+        flipArr2(array, 0);
     }
 
-    public static int flipArr(int a[], int n) {
+    private static void flipArr(int a[], int n) {
         if (n == 0) {
-            return a[n];
-        } else {
-            System.out.print(a[n - 1] + " ");
-            return flipArr(a, n - 1);
+            return;
         }
+        System.out.print(a[n - 1] + " ");
+        flipArr(a, n - 1);
+    }
+
+    private static void flipArr2(int[] a, int n) {
+        if (n == a.length) {
+            System.out.printf(" | ");
+            return;
+        }
+        System.out.printf("%d ", a[n]);
+        flipArr2(a, n + 1);
+        System.out.printf("%d ", a[n]);
     }
 }

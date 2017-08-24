@@ -3,8 +3,9 @@
 
 package Task2_1;
 
-import java.util.Scanner;
 import Task2.LinkedList;
+
+import java.util.Scanner;
 
 public class MergeList {
     public static void main(String[] args) {
@@ -46,7 +47,7 @@ public class MergeList {
     public static LinkedList concatenate(LinkedList l1, LinkedList l2) {
         LinkedList l3 = new LinkedList();
 
-        while(!l1.isNextNull()){
+        while (!l1.isNextNull()) {
             l3.insert(l1.getActualData());
             l3.goNext();
         }
@@ -54,7 +55,7 @@ public class MergeList {
         l2.zero();
         l2.goNext();
 
-        while(!l2.isNextNull()){
+        while (!l2.isNextNull()) {
             l3.insert(l2.getActualData());
             l3.goNext();
         }

@@ -6,17 +6,17 @@
 
 package Task2_3;
 
+import Task2.LinkedList;
+
 import java.util.Scanner;
 
 public class InvertedList {
-/*
     public static int size;
 
     public static void main(String[] args) {
         int a = 1, temp;
         Scanner input = new Scanner(System.in);
-        LinkedListX list = new LinkedListX();
-        Iteration itr = new Iteration(list);
+        LinkedList list = new LinkedList();
 
         System.out.print("Number of elements in the List: ");
         size = input.nextInt();
@@ -24,16 +24,15 @@ public class InvertedList {
         for (int i = 0; i < size; i++) {
             System.out.printf("Number [%d]: ", a);
             temp = input.nextInt();
-            itr.insert(temp);
+            list.insert(temp);
             a++;
         }
 
         System.out.print("\nInverted List: ");
-        itr.print(invert(itr).list);
+        list.print(invert(list));
     }
 
-    // ParseInt
-    public static Iteration invert(Iteration lt) {
+    public static LinkedList invert(LinkedList lt) {
 
         int arr[] = new int[size];
         int a = 1;
@@ -49,6 +48,4 @@ public class InvertedList {
 
         return lt;
     }
-    // ParseInt
-*/
 }
