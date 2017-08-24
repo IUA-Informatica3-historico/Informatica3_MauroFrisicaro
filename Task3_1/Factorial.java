@@ -20,7 +20,7 @@ public class Factorial {
         factNum(number);
     }
 
-    public static int factNum(int n) {
+    private static int factNum(int n) {
         System.out.println();
 
         if (n == 1) {

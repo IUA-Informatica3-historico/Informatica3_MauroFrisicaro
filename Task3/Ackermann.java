@@ -4,6 +4,8 @@
             A(m-1, A(m, n-1))   if m > 0 and n < 0
 */
 
+// VM Options: -Xss 100M
+
 package Task3;
 
 import java.util.Scanner;
@@ -22,7 +24,7 @@ public class Ackermann {
         System.out.print("The Ackermann of those numbers is: " + ackm(number1, number2));
     }
 
-    public static int ackm(int m, int n) {
+    private static int ackm(int m, int n) {
         if (m < 0 || n < 0) {
             throw new IllegalArgumentException("Non-negative args only!");
         }

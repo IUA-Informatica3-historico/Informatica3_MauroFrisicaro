@@ -30,10 +30,12 @@ public class Powered {
         System.out.print(power(base, exponent));
     }
 
-    public static long power(int x, int y) {
+    private static long power(int x, int y) {
         if (y == 1) {
             System.out.printf("%d = ", x);
             return x;
+        } else if (y == 0) {
+            return 1;
         }
 
         System.out.printf("%d * ", x);

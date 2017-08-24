@@ -3,15 +3,29 @@
 
 package Task3_6;
 
+import java.util.Scanner;
+
 public class BinaryCounter {
     public static void main(String[] args) {
+        int number;
+        Scanner input = new Scanner(System.in);
 
+        do {
+            System.out.print("Write a Number: ");
+            number = input.nextInt();
+        }
+        while (number < 0);
 
+        System.out.println();
+        System.out.println("\nThe amount of 1s on the number in binary is: " + bnCt(number));
     }
 
-    int cu(int n) {
-        if (n < 2)
+    static int bnCt(int n) {
+        if (n < 2) {
             return n;
-        return (n%2+cu(n-2));
+        } else {
+            return bnCt(n / 2) + bnCt(n % 2);
+        }
+
     }
 }

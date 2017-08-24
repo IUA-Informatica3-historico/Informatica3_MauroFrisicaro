@@ -19,10 +19,12 @@ public class Multiplication {
         System.out.print(mul(number1, number2));
     }
 
-    public static int mul(int a, int b) {
+    private static double mul(int a, int b) {
         if (b == 1) {
             System.out.printf("%d = ", a);
             return a;
+        } else if (b < 0) {
+            return -a - mul(-a, b + 1);
         } else {
             System.out.printf("%d + ", a);
             return a + mul(a, b - 1);

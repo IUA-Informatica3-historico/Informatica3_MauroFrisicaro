@@ -30,13 +30,19 @@ public class Division {
         System.out.print(div(dividend, divider));
     }
 
-    public static int div(int a, int b) {
-        if (a < b) {
+    private static double div(int a, int b) {
+        if (Math.abs(a) < Math.abs(b)) {
             System.out.printf("%d -> ", a);
             return 0;
-        } else {
+        } else if ((a > 0 && b > 0) || (a < 0 && b < 0)) {
             System.out.printf("%d - ", a);
             return 1 + div(a - b, b);
+        } else if (a > 0 && b < 0) {
+            return -1 + div(a + b, b);
+        } else if (a < 0 && b > 0) {
+            return -1 - div(-a - b, -b);
+        } else {
+            throw new ArithmeticException("Cant divide by zero.");
         }
     }
 }

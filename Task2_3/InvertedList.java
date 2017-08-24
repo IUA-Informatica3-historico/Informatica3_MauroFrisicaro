@@ -32,7 +32,7 @@ public class InvertedList {
         itr.print(invert(itr).list);
     }
 
-    // WIP
+    // ParseInt
     public static Iteration invert(Iteration lt) {
 
         int arr[] = new int[size];
@@ -49,6 +49,6 @@ public class InvertedList {
 
         return lt;
     }
-    // WIP
+    // ParseInt
 */
 }
