@@ -56,7 +56,7 @@ public class LinkListTest {
         list.add(10);
         list.delete(2);
         assertEquals("30 10", list.toString());
-/*
+
         // Deleting the first node
         list.add(90);
         list.delete(1);
@@ -79,6 +79,5 @@ public class LinkListTest {
         list.add(400);
         list.delete(-1);
         list.delete(5);
-        */
     }
 }
