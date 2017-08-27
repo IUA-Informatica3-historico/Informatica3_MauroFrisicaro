@@ -6,34 +6,40 @@
 
 package Task2_3;
 
-import Task2.LinkedList;
+import Task2.LinkList;
 
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class InvertedList {
-    public static int size;
+
+    private static int size;
 
     public static void main(String[] args) {
-        int a = 1, temp;
+        int temp;
+        AtomicInteger counter = new AtomicInteger(1);
         Scanner input = new Scanner(System.in);
-        LinkedList list = new LinkedList();
+        LinkList<Integer> list = new LinkList<>();
 
-        System.out.print("Number of elements in the List: ");
+        System.out.print("Length of List: ");
         size = input.nextInt();
 
-        for (int i = 0; i < size; i++) {
-            System.out.printf("Number [%d]: ", a);
+        for (int i = 0; i < size; ++i) {
+            System.out.printf("Number [%d]: ", counter.get());
             temp = input.nextInt();
-            list.insert(temp);
-            a++;
+            list.add(temp);
+            counter.getAndIncrement();
         }
 
         System.out.print("\nInverted List: ");
-        list.print(invert(list));
+        invert(list);
+        System.out.println(list.toString());
     }
 
-    public static LinkedList invert(LinkedList lt) {
+    public static void invert(LinkList lt) {
 
+        // WIP
+/*
         int arr[] = new int[size];
         int a = 1;
 
@@ -45,7 +51,7 @@ public class InvertedList {
             ++i;
             --j;
         }
-
         return lt;
+*/
     }
 }

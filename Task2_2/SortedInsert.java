@@ -3,35 +3,58 @@
 
 package Task2_2;
 
-import Task2.LinkedList;
+import Task2.LinkList;
+
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class SortedInsert {
     public static void main(String[] args) {
-        int max = 20, j = 1, m, x;
+
+        int size, temp;
+        AtomicInteger counter = new AtomicInteger(1);
         Scanner input = new Scanner(System.in);
-        LinkedList list = new LinkedList();
+        LinkList<Integer> list = new LinkList<>();
+
+        System.out.print("Length of List: ");
+        size = input.nextInt();
+
+        for (int i = 0; i < size; ++i) {
+            System.out.printf("Number [%d]: ", counter.get());
+            temp = input.nextInt();
+
+            sort(list, temp);
+            counter.getAndIncrement();
+
+            System.out.println("\nSorted List: " + list.toString());
+        }
+
+        /*
+        int max = 10, m, x;
+        AtomicInteger counter = new AtomicInteger(1);
+        Scanner input = new Scanner(System.in);
+        LinkList<Integer> list = new LinkList<>();
 
         System.out.print("Input of " + max + " numbers between 0 and 100.\n");
 
-        for (int i = 0; i < max; i++) {
+        for (int i = 0; i < max; ++i) {
             m = 0;
 
             do {
-                System.out.printf("Number [%d]: ", j);
+                System.out.printf("Number [%d]: ", counter.get());
                 x = input.nextInt();
 
                 if (x < 0 || x > 100) {
                     System.out.print("The Number is out of range.\n");
                 } else {
                     if (i == 0) {
-                        list.insert(x);
+                        list.add(x);
                         m = 1;
-                        j++;
+                        counter.getAndIncrement();
                     } else {
-                        Sorted(x, list);
+                        Sorted(list, x);
                         m = 1;
-                        j++;
+                        counter.getAndIncrement();
                     }
                 }
             }
@@ -39,12 +62,14 @@ public class SortedInsert {
         }
 
         System.out.print("\nSorted List: ");
-        list.print(list);
-        System.out.print("Full: ");
+        sort(list, x);
+        System.out.print(list.toString());
+        */
     }
 
-    public static void Sorted(int x, LinkedList lt) {
-/*
+    private static void sort(LinkList lt, int x) {
+// WIP
+        /*
         Object temp;
         lt.zero();
 
@@ -58,6 +83,6 @@ public class SortedInsert {
             lt.goNext();
         }
         lt.insert(x);
-*/
+        */
     }
 }

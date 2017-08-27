@@ -3,18 +3,20 @@
 
 package Task2_1;
 
-import Task2.LinkedList;
+import Task2.LinkList;
 
 import java.util.Scanner;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class MergeList {
-    public static void main(String[] args) {
 
-        int size1, size2, counter, temp;
+    public static void main(String[] args) {
+        int size1, size2, temp;
+        AtomicInteger counter = new AtomicInteger();
         Scanner input = new Scanner(System.in);
-        LinkedList list1 = new LinkedList();
-        LinkedList list2 = new LinkedList();
-        LinkedList list3;
+        LinkList<Integer> list1 = new LinkList<>();
+        LinkList<Integer> list2 = new LinkList<>();
+        LinkList list3;
 
         System.out.print("Number of elements in the First List: ");
         size1 = input.nextInt();
@@ -22,44 +24,52 @@ public class MergeList {
         size2 = input.nextInt();
 
         System.out.print("\nList 1\n");
-        counter = 1;
-        for (int i = 0; i < size1; i++) {
-            System.out.printf("Element [%d]: ", counter);
+        counter.set(1);
+        for (int i = 0; i < size1; ++i) {
+            System.out.printf("Element [%d]: ", counter.get());
             temp = input.nextInt();
-            list1.insert(temp);
-            counter++;
+            list1.add(temp);
+            counter.getAndIncrement();
         }
 
         System.out.print("\nList 2\n");
-        counter = 1;
-        for (int i = 0; i < size2; i++) {
-            System.out.printf("Element [%d]: ", counter);
+        counter.set(1);
+        for (int i = 0; i < size2; ++i) {
+            System.out.printf("Element [%d]: ", counter.get());
             temp = input.nextInt();
-            list2.insert(temp);
-            counter++;
+            list2.add(temp);
+            counter.getAndIncrement();
         }
 
         System.out.print("\nNew Merged List: ");
         list3 = concatenate(list1, list2);
-        list3.print(list3);
+        System.out.println(list3.toString());
     }
 
-    public static LinkedList concatenate(LinkedList l1, LinkedList l2) {
-        LinkedList l3 = new LinkedList();
+    private static LinkList concatenate(LinkList l1, LinkList l2) {
+        // WIP
+        LinkList l3 = new LinkList();
+        String text = l1.toString() + " " + l2.toString();
 
-        while (!l1.isNextNull()) {
-            l3.insert(l1.getActualData());
-            l3.goNext();
+        for (int i = 0; i < text.length(); ++i) {
+/*
+            if(text.charAt(i).equals(" ")){
+
+            }else if(){
+
+            }else if(){
+
+            }else{
+
+            }
+*/
+
+
         }
 
-        l2.zero();
-        l2.goNext();
+        System.out.println(text);
 
-        while (!l2.isNextNull()) {
-            l3.insert(l2.getActualData());
-            l3.goNext();
-        }
-
+        // WIP
         return l3;
     }
 }
