@@ -118,16 +118,19 @@ public class LinkList<T> {
         if(isEmpty()){
             throw new RuntimeException("The list is empty.");
         }
-        else if(index < 0){
-            throw new RuntimeException("The index is negative.");
+        else if((index < 0) || (index > getSize() -1)){
+            throw new RuntimeException("The index is out of range.");
         }
+
+        // x
+
         else if(index == 1){
             head.setNext(head.getNext().getNext());
             return;
         }
         else if(index == getSize()){
             for(int i = 0; i < getSize(); ++i){
-                if(i == i-1){
+                if(i == i-1){ // Always false :C
                     temp.setNext(temp.getNext());
                 }
             }

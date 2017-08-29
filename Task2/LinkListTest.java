@@ -70,7 +70,7 @@ public class LinkListTest {
         // Deleting all the elements
         list.delete(1);
         list.delete(2);
-        assertEquals("10 90", list.toString());
+        assertEquals("", list.toString());
         assertFalse(list.isEmpty());
 
         // Using wrong indexes
@@ -79,5 +79,6 @@ public class LinkListTest {
         list.add(400);
         list.delete(-1);
         list.delete(5);
+        assertEquals("100 200 400", list.toString());
     }
 }
