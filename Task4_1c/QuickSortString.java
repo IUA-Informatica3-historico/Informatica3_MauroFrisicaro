@@ -19,7 +19,6 @@ public class QuickSortString {
         }
     }
 
-
     private static void quickSort(String array[], int left, int right) {
         int i = left, j = right;
         String temp;
