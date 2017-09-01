@@ -8,29 +8,42 @@ import java.io.IOException;
 
 public class SortTXT {
     public static void main(String[] args) {
-        System.out.print("Started Running\n..............\n\n");
 
         // Making the array
-        String arrayS[] = new String[2014322]; // 2014322 Elements to be sorted
-        String arrayB[] = new String[2014322]; // 2014322 Elements to be sorted
-        String arrayQ[] = new String[2014322]; // 2014322 Elements to be sorted
+        int size = 2014322; // 2014322 Elements to be sorted
+        String arrayS[] = new String[size];
+        String arrayB[] = new String[size];
+        String arrayQ[] = new String[size];
+
+        FileReader reader = null;
+        BufferedReader bufferedReader = null;
 
         try {
-            FileReader reader = new FileReader("src\\Task4_2\\es.txt");
-            BufferedReader bufferedReader = new BufferedReader(reader);
+            reader = new FileReader("src\\Task4_2\\es.txt");
+            bufferedReader = new BufferedReader(reader);
 
             String line;
-
             for (int i = 0; (line = bufferedReader.readLine()) != null; ++i) {
                 arrayS[i] = line;
                 arrayQ[i] = line;
                 arrayB[i] = line;
             }
-
-            reader.close();
-
         } catch (IOException e) {
+            System.out.println(e.getMessage());
             e.printStackTrace();
+        } finally {
+            if (bufferedReader != null) {
+                try {
+                    bufferedReader.close();
+                } catch (IOException ignored) {
+                }
+            }
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException ignored) {
+                }
+            }
         }
 
         // Sorting
@@ -48,34 +61,34 @@ public class SortTXT {
         quickSort(arrayQ, 0, arrayQ.length - 1);
         tQS = System.nanoTime() - tNow;
 
-        double secs = 1000000000.0;
-        System.out.print("BubbleSort took " + tBS + " nanoseconds.\nShellSort took " + tSS + " nanoseconds.\nQuickSort took " + tQS + " nanoseconds.\n\n");
-        System.out.print("BubbleSort took " + tBS / secs + " seconds.\nShellSort took " + tSS / secs + " seconds.\nQuickSort took " + tQS / secs + " seconds.\n");
+        System.out.print("BubbleSort took " + tBS / 1e9 + " seconds.\n" +
+                "ShellSort took " + tSS / 1e9 + " seconds.\n" +
+                "QuickSort took " + tQS / 1e9 + " seconds.\n");
     }
 
     private static void bubbleSort(String array[]) {
-        int n;
-        String temp;
 
-        for (int i = 1; i < array.length; i++) {
-            n = i;
-
-            while (n > 0 && array[n - 1].compareTo(array[n]) > 0) {
-                temp = array[n];
-                array[n] = array[n - 1];
-                array[n - 1] = temp;
-                n--;
+        for (int i = 0; i < array.length - 1; ++i) {
+            boolean swapped = false;
+            for (int j = 0; j < array.length - i - 1; ++j) {
+                if (array[j].compareTo(array[j + 1]) > 0) {
+                    final String tmp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = tmp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
             }
         }
     }
 
     private static void shellSort(String array[]) {
-        String temp;
-
         for (int gap = array.length / 2; gap > 0; gap /= 2) {
             for (int i = gap; i < array.length; i++) {
                 for (int j = i - gap; j >= 0 && array[j].compareTo(array[j + gap]) > 0; j -= gap) {
-                    temp = array[j];
+                    final String temp = array[j];
                     array[j] = array[j + gap];
                     array[j + gap] = temp;
                 }
@@ -85,7 +98,6 @@ public class SortTXT {
 
     private static void quickSort(String array[], int left, int right) {
         int i = left, j = right;
-        String temp;
 
         do {
             while (array[j].compareTo(array[i]) > 0 && j > i) {
@@ -93,7 +105,7 @@ public class SortTXT {
             }
 
             if (i < j) {
-                temp = array[i];
+                final String temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
                 i++;
@@ -104,7 +116,7 @@ public class SortTXT {
             }
 
             if (i < j) {
-                temp = array[i];
+                final String temp = array[i];
                 array[i] = array[j];
                 array[j] = temp;
                 j--;
