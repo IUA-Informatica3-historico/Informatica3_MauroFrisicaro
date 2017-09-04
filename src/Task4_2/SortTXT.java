@@ -50,7 +50,7 @@ public class SortTXT {
         long tNow, tBS, tSS, tQS;
 
         tNow = System.nanoTime();
-        bubbleSort(arrayB);
+//        bubbleSort(arrayB);
         tBS = System.nanoTime() - tNow;
 
         tNow = System.nanoTime();
@@ -61,9 +61,7 @@ public class SortTXT {
         quickSort(arrayQ, 0, arrayQ.length - 1);
         tQS = System.nanoTime() - tNow;
 
-        System.out.print("BubbleSort took " + tBS / 1e9 + " seconds.\n" +
-                "ShellSort took " + tSS / 1e9 + " seconds.\n" +
-                "QuickSort took " + tQS / 1e9 + " seconds.\n");
+        System.out.print("BubbleSort took " + tBS / 1e9 + " seconds.\nShellSort took " + tSS / 1e9 + " seconds.\nQuickSort took " + tQS / 1e9 + " seconds.\n");
     }
 
     private static void bubbleSort(String array[]) {
