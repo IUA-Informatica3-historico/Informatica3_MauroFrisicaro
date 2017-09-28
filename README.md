@@ -33,11 +33,11 @@ Ej: fn(2345) -> 2 3 4 5
 
 ## Guia 4 - Ordenamiento
 1. Implemente los métodos de ordenación de inserción, Shellsort y quicksort usando las implementaciones del teórico.
-   Ejecútelos con los siguientes objetos:
-   * Enteros.
-   * Números reales de tipo double.
-   * Cadena de caracteres.
-   * Utilice los métodos de ordenación de inserción, Shellsort y quicksort para ordenar el archivo es.txt y evaluando el tiempo que demora cada algoritmo.
+    Ejecútelos con los siguientes objetos:
+    * Enteros.
+    * Números reales de tipo double.
+    * Cadena de caracteres.
+    * Utilice los métodos de ordenación de inserción, Shellsort y quicksort para ordenar el archivo es.txt y evaluando el tiempo que demora cada algoritmo.
 
 ## Guia 5 - Pilas y Colas con Listas
 1. Implemente un apuntador de citas usando el concepto de cola implementada mediante el uso de una lista enlazada.
@@ -106,7 +106,9 @@ Maze Challenge: Implement the recursive resolver method (int x, int y).
 It will be punctuated by neatness of the code, form of resolution and date of delivery.
 
 # Proyecto Segundo Parcial
-![IUA Logo](http://www.biblioteca.mincyt.gob.ar/images/logos/nodes/iua.png)
+![IUA Logo](https://i.gyazo.com/4db3d6ee58438004e83171011a2efdc7.jpg)
+
+[![https://gyazo.com/4db3d6ee58438004e83171011a2efdc7](https://i.gyazo.com/4db3d6ee58438004e83171011a2efdc7.jpg)](https://gyazo.com/4db3d6ee58438004e83171011a2efdc7)
 
 ## Introducción:
 Un cliente de correo es un software que permite realizar la gestión de los correos recibidos y enviados.
