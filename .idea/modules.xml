@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Informatica3.iml" filepath="$PROJECT_DIR$/Informatica3.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Laberinto/MazeGenerator/MazeGenerator.iml" filepath="$PROJECT_DIR$/../Laberinto/MazeGenerator/MazeGenerator.iml" />
     </modules>
   </component>
 </project>

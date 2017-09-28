@@ -1,7 +1,3 @@
-/*  Mauro Frisicaro mfrisicaro220@alumnos.iua.edu.ar
-    1. Implemente un apuntador de citas usando el concepto de cola circular
-    implementada mediante el uso de un arreglo. */
-
 package Task1_1;
 
 import java.util.Scanner;
@@ -17,8 +13,7 @@ public class AppointmentsLog {
         System.out.print("Appointments Log\n\n");
 
         do {
-            System.out.print("1 - Add Appointment\n2 - Remove First Appointment\n" +
-                    "3 - List Appointments\n4 - Empty Log\n5 - Exit\n\nOption: ");
+            System.out.print("1 - Add Appointment\n2 - Remove First Appointment\n3 - List Appointments\n4 - Empty Log\n5 - Exit\n\nOption: ");
             op = input.nextInt();
 
             switch (op) {

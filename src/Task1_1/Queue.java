@@ -1,6 +1,7 @@
 package Task1_1;
 
 public class Queue { // First In First Out
+
     private String dates[];
     private int max;
     private int size;
