@@ -1,5 +1,3 @@
-/*  2. Utilice los métodos de ordenación de inserción, Shellsort y quicksort para
-    ordenar el archivo es.txt y evaluando el tiempo que demora cada algoritmo. */
 package Task4_2;
 
 import java.io.BufferedReader;
@@ -50,7 +48,7 @@ public class SortTXT {
         long tNow, tBS, tSS, tQS;
 
         tNow = System.nanoTime();
-//        bubbleSort(arrayB);
+        bubbleSort(arrayB);
         tBS = System.nanoTime() - tNow;
 
         tNow = System.nanoTime();

@@ -1,5 +1,3 @@
-/*  Escriba un método recursivo que calcule el producto de dos números enteros usando sumas sucesivas. */
-
 package Task3_3;
 
 import java.util.Scanner;

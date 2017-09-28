@@ -1,5 +1,3 @@
-/*  Escriba un método recursivo que imprima los elementos de un arreglo en orden inverso. */
-
 package Task3_5;
 
 import java.util.Scanner;

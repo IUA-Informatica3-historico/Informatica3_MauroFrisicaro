@@ -1,6 +1,7 @@
 package Task6;
 
 public class ArbolBinario<T extends Comparable> {
+
     private NodoArbolBinario<T> root;
 
     ArbolBinario() {
@@ -35,5 +36,13 @@ public class ArbolBinario<T extends Comparable> {
         if (root != null)
             root.postorder();
         System.out.println();
+    }
+
+    public boolean esVacio() {
+        return root == null;
+    }
+
+    public void vaciar() {
+        root = null;
     }
 }

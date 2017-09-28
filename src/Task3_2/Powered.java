@@ -1,7 +1,3 @@
-/*  Escribir un método power (base, exponente) que, al llamarla, devuelva baseexponente.
-    Por ejemplo, power ( 3,2 ) = 32=3*(31)=3*(3*30)=3*(3*1)=3*3=9.
-    Suponga que exponente es un entero mayor o igual que 1. */
-
 package Task3_2;
 
 import java.util.Scanner;

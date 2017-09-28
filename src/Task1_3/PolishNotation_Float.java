@@ -1,6 +1,3 @@
-/*  3. Modifique el programa anterior para que la calculadora de 4 funciones trabaje
-    con números en punto flotante. */
-
 package Task1_3;
 
 import java.util.Scanner;

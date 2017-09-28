@@ -1,6 +1,3 @@
-/*  4. Implemente un programa que ingresada una función matemática, verifique si la
-    cantidad de (,[,{ que abren están balanceados con los que cierran. */
-
 package Task1_4;
 
 import java.util.Scanner;

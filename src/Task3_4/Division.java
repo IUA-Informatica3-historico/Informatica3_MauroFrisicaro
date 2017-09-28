@@ -1,5 +1,3 @@
-/*  Escriba un método recursivo que calcule el cociente de dos números enteros usando restas sucesivas. */
-
 package Task3_4;
 
 import java.util.Scanner;
@@ -30,7 +28,7 @@ public class Division {
         System.out.print(div(dividend, divider));
     }
 
-  private static int divImpl(int a, int b) {
+    private static int divImpl(int a, int b) {
         return a >= b
                 ? 1 + divImpl(a - b, b)
                 : 0;

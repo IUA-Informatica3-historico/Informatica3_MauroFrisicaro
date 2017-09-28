@@ -74,7 +74,7 @@ public class LinkList<T> {
     @Override
     public String toString() {
 
-        if(isEmpty()){
+        if (isEmpty()) {
             return "";
         }
 
@@ -100,7 +100,6 @@ public class LinkList<T> {
     */
 
     /**
-     *
      * @return the size of the list.
      */
     public int getSize() {
@@ -109,35 +108,34 @@ public class LinkList<T> {
 
     /**
      * Deletes a element of the list by index.
+     *
      * @param index element to be deleted.
      */
-    public void delete(int index){
+    public void delete(int index) {
         // WIP
         Node temp = head;
 
-        if(isEmpty()){
+        if (isEmpty()) {
             throw new RuntimeException("The list is empty.");
-        }
-        else if((index < 0) || (index > getSize() -1)){
+        } else if ((index < 0) || (index > getSize() - 1)) {
             throw new RuntimeException("The index is out of range.");
         }
 
         // x
 
-        else if(index == 1){
+        else if (index == 1) {
             head.setNext(head.getNext().getNext());
             return;
-        }
-        else if(index == getSize()){
-            for(int i = 0; i < getSize(); ++i){
-                if(i == i-1){ // Always false :C
+        } else if (index == getSize()) {
+            for (int i = 0; i < getSize(); ++i) {
+                if (i == i - 1) { // Always false :C
                     temp.setNext(temp.getNext());
                 }
             }
         }
 
-        for(int i = 0; i < getSize(); ++i){
-            if(i == index -1){
+        for (int i = 0; i < getSize(); ++i) {
+            if (i == index - 1) {
                 temp.setNext(temp.getNext().getNext());
             }
 

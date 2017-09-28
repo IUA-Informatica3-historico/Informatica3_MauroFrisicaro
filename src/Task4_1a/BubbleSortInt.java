@@ -1,9 +1,3 @@
-/*  1. Implemente los métodos de ordenación de inserción, Shellsort y quicksort
-    usando las implementaciones del teórico. Ejecútelos con los siguientes objetos:
-    a) enteros.
-    b) números reales de tipo double.
-    c) cadena de caracteres. */
-
 package Task4_1a;
 
 import static java.lang.System.*;

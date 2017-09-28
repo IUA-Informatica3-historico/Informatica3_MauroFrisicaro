@@ -1,6 +1,3 @@
-/*  2. Implemente una calculadora de 4 funciones en notación polaca usando el
-    concepto de pilas implementada mediante el uso de un arreglo. */
-
 package Task1_2;
 
 import java.util.Scanner;
