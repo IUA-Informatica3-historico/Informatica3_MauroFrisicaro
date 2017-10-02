@@ -53,18 +53,20 @@ Ej: fn(2345) -> 2 3 4 5
 ## Guia 6 - Arboles Binarios
 1. Implementar un método contarPorNivel que devuelva el numero de nodos en el nivel iésimo de un árbol binario
 2. Reconstruir un árbol binario a partir de los recorridos siguientes:
-   * Preorden: 2, 5, 3, 9, 7, 1, 6, 4, 8.
-   * Inorden: 9, 3, 7, 5, 1, 2, 6, 8, 4.
-   * Inorden: 5, 6, 12, 10, 1, 9, 13, 4, 8, 2, 7, 3, 11.
-   * Postorden: 6, 5, 10, 9, 1, 13, 12, 2, 8, 3, 11, 7, 4.
+   * Arbol 1:
+       - Preorden: 2, 5, 3, 9, 7, 1, 6, 4, 8.
+       - Inorden: 9, 3, 7, 5, 1, 2, 6, 8, 4. 
+   * Arbol 2:  
+       - Inorden: 5, 6, 12, 10, 1, 9, 13, 4, 8, 2, 7, 3, 11.
+       - Postorden: 6, 5, 10, 9, 1, 13, 12, 2, 8, 3, 11, 7, 4.
 3. Escriba un método que devuelva la cantidad de nodos que posee un árbol.
 4. Implementar una función no recursiva para recorrer un árbol binario en inOrden.
 5. Escriba un programa para generar un árbol binario de 10 números de valores comprendidos entre 0 y 25.
-6. Escriba un método de recorrido de árbol binario denominado inorder para mostrar el árbol generado en forma ordenada..
+6. Escriba un método de recorrido de árbol binario denominado inOrder para mostrar el árbol generado en forma ordenada.
 7. Determine si el programa del ejercicio 1 permite que el árbol binario contenga valores duplicados.
    Cualquiera sea la respuesta, modifique el programa a fin de hacer lo opuesto.
-8. Escriba un método depth que recibe un árbol binario y determina cuántos niveles tiene.
-9. Escriba un método llamado dtree, que toma como sus argumentos una referencia al nodo raíz del árbol y el valor a borrarse.
+8. Escriba un método _depth_ que recibe un árbol binario y determina cuántos niveles tiene.
+9. Escriba un método llamado _dtree_, que toma como sus argumentos una referencia al nodo raíz del árbol y el valor a borrarse.
    El método deberá localizar el nodo que contenga el valor a borrarse y si no lo encuentra deberá imprimir un mensaje para indicarlo. 
    Después de borrar un elemento, llame al método inorder para confirmar que la operación de borrado fue correctamente ejecutada.
 

@@ -1,11 +1,8 @@
 package Task6;
 
 public class Main {
-
     public static void main(String[] args) {
-        // write your code here
-
-        ArbolBinario<String> ar = new ArbolBinario<>();
+        BinaryTree<String> ar = new BinaryTree<>();
 
         ar.insert("Hola");
         ar.insert("Chau");
@@ -16,9 +13,8 @@ public class Main {
         ar.insert("Frente");
         ar.insert("Fondo");
 
-        ar.preorder();
-        ar.inorder();
-        ar.postorder();
+        System.out.print(ar.preOrder() + "\n" + ar.inOrder() + "\n" + ar.postOrder() + "\n\n");
+
         try {
             ar.delete("Fondo");
             ar.delete("Chau");
@@ -27,6 +23,7 @@ public class Main {
         } catch (Exception e) {
             System.out.println(e);
         }
-        System.out.println("andubo");
+
+        System.out.println("Funciona");
     }
 }

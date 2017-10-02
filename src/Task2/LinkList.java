@@ -6,31 +6,8 @@ package Task2;
 
 public class LinkList<T> {
 
-    private static class Node<U> {
-        private U data;
-        private Node next;
-
-        private Node(U data, Node node) {
-            this.data = data;
-            this.next = node;
-        }
-
-        private Node getNext() {
-            return next;
-        }
-
-        private void setNext(Node next) {
-            this.next = next;
-        }
-
-        private U getData() {
-            return data;
-        }
-    }
-
     private Node<T> head;
     private int size;
-
     /**
      * Creates empty list.
      */
@@ -91,6 +68,13 @@ public class LinkList<T> {
         return text.toString();
     }
 
+    /**
+     * @return the size of the list.
+     */
+    public int getSize() {
+        return size;
+    }
+
     /*
     public T getAt(int index){
         // WIP
@@ -98,13 +82,6 @@ public class LinkList<T> {
         return ;
     }
     */
-
-    /**
-     * @return the size of the list.
-     */
-    public int getSize() {
-        return size;
-    }
 
     /**
      * Deletes a element of the list by index.
@@ -140,6 +117,28 @@ public class LinkList<T> {
             }
 
             temp = temp.getNext();
+        }
+    }
+
+    private static class Node<U> {
+        private U data;
+        private Node next;
+
+        private Node(U data, Node node) {
+            this.data = data;
+            this.next = node;
+        }
+
+        private Node getNext() {
+            return next;
+        }
+
+        private void setNext(Node next) {
+            this.next = next;
+        }
+
+        private U getData() {
+            return data;
         }
     }
 }
