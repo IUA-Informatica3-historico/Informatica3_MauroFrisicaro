@@ -248,7 +248,7 @@ public class BinaryTree<T extends Comparable> {
                 node = node.left;
             }
 
-            while (stack.size() > 0) {
+            while (!stack.isEmpty()) {
                 node = stack.pop();
 
                 txt.append(node.data).append(" ");

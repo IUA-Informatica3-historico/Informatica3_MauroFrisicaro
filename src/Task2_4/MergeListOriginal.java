@@ -1,5 +1,3 @@
-/*  Implemente el metodo merge(list) que agrega los elementos de list a la list original. */
-
 package Task2_4;
 
 import Task2.LinkList;
@@ -23,19 +21,19 @@ public class MergeListOriginal {
 
         System.out.print("\nList 1\n");
         counter.set(1);
-        for (int i = 0; i < size1; ++i) {
+        for (int j = 0; j < size1; ++j) {
             System.out.printf("Element [%d]: ", counter.get());
             temp = input.nextInt();
-            list1.add(temp);
+            list1.insert(temp);
             counter.getAndIncrement();
         }
 
         System.out.print("\nList 2\n");
         counter.set(1);
-        for (int i = 0; i < size2; ++i) {
+        for (int j = 0; j < size2; ++j) {
             System.out.printf("Element [%d]: ", counter.get());
             temp = input.nextInt();
-            list2.add(temp);
+            list2.insert(temp);
             counter.getAndIncrement();
         }
 
@@ -45,15 +43,23 @@ public class MergeListOriginal {
     }
 
     public static void merge(LinkList l1, LinkList l2) {
-        // WIP
         String text = l2.toString();
+        StringBuilder x = new StringBuilder();
 
         for (int i = 0; i < text.length(); ++i) {
-
-
+            if ((text.charAt(i) == ('0')) || (text.charAt(i) == ('1')) ||
+                    (text.charAt(i) == ('2')) || (text.charAt(i) == ('3')) ||
+                    (text.charAt(i) == ('4')) || (text.charAt(i) == ('5')) ||
+                    (text.charAt(i) == ('6')) || (text.charAt(i) == ('7')) ||
+                    (text.charAt(i) == ('8')) || (text.charAt(i) == ('9'))) {
+                x.append(text.charAt(i));
+            } else if (text.charAt(i) == (' ')) {
+                l1.insert(Integer.parseInt(x.toString()));
+                x.setLength(0);
+            } else {
+                System.out.println("ERROR - Invalid String Input");
+            }
         }
-
-
-        // WIP
+        l1.insert(Integer.parseInt(x.toString()));
     }
 }

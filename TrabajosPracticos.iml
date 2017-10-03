@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/out" />
+      <excludeFolder url="file://$MODULE_DIR$/src/Task2_6_Clases" />
       <excludeFolder url="file://$MODULE_DIR$/src/Task2_M" />
       <excludeFolder url="file://$MODULE_DIR$/src/Task6_M" />
     </content>

@@ -1,13 +1,10 @@
-// Mauro Frisicaro
-// mfrsicaro220@alumnos.iua.edu.ar
-
 package Task2;
-
 
 public class LinkList<T> {
 
     private Node<T> head;
     private int size;
+
     /**
      * Creates empty list.
      */
@@ -23,11 +20,19 @@ public class LinkList<T> {
     }
 
     /**
+     * Makes the list being empty.
+     */
+    public void doEmpty() {
+        head = null;
+        size = 0;
+    }
+
+    /**
      * Add a new element to the end of list
      *
      * @param element to be added
      */
-    public void add(T element) {
+    public void insert(T element) {
 
         Node<T> newNode = new Node<>(element, null);
         if (head == null) {
@@ -75,49 +80,49 @@ public class LinkList<T> {
         return size;
     }
 
-    /*
-    public T getAt(int index){
-        // WIP
-
-        return ;
-    }
-    */
-
     /**
      * Deletes a element of the list by index.
      *
      * @param index element to be deleted.
      */
-    public void delete(int index) {
-        // WIP
-        Node temp = head;
+    public void delete(int index) throws Exception {
+        Node aux = head;
+        int count = 0;
 
-        if (isEmpty()) {
-            throw new RuntimeException("The list is empty.");
-        } else if ((index < 0) || (index > getSize() - 1)) {
-            throw new RuntimeException("The index is out of range.");
+        if (index == 0) {
+            head = head.getNext();
         }
 
-        // x
+        if (size <= index) {
+            throw new Exception("The size is " + size);
+        }
 
-        else if (index == 1) {
-            head.setNext(head.getNext().getNext());
+        while (count < (index - 1) && aux != null) {
+            count++;
+            aux = aux.getNext();
+        }
+
+        aux.setNext(aux.getNext().getNext());
+    }
+
+    // Task 2.2
+    public void sortedInsert(T element) {
+        Node<T> newNode = new Node<>(element, null);
+
+        if (head == null) {
+            size = 1;
+            head = newNode;
             return;
-        } else if (index == getSize()) {
-            for (int i = 0; i < getSize(); ++i) {
-                if (i == i - 1) { // Always false :C
-                    temp.setNext(temp.getNext());
-                }
-            }
         }
 
-        for (int i = 0; i < getSize(); ++i) {
-            if (i == index - 1) {
-                temp.setNext(temp.getNext().getNext());
-            }
-
-            temp = temp.getNext();
+        // WIP WIP WIP
+        Node last = head;
+        while (last.getNext() != null) {
+            last = last.getNext();
         }
+        size++;
+        last.setNext(newNode);
+        // WIP WIP WIP
     }
 
     private static class Node<U> {

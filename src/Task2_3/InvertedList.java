@@ -1,9 +1,3 @@
-/*  Implementar la función fnInvierte(lista).
-    Esta función invertirá el orden original de los elementos en la lista, de tal forma que el último elemento
-    será ahora el primero, el penúltimo será el segundo, y así hasta que el primero sea el último.
-    Considere que la lista no está vacía y que no se construirá una nueva, sólo se invertirá el orden de los elementos
-    de la lista original. */
-
 package Task2_3;
 
 import Task2.LinkList;
@@ -13,8 +7,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class InvertedList {
 
-    private static int size;
-
     public static void main(String[] args) {
         int temp;
         AtomicInteger counter = new AtomicInteger(1);
@@ -22,12 +14,12 @@ public class InvertedList {
         LinkList<Integer> list = new LinkList<>();
 
         System.out.print("Length of List: ");
-        size = input.nextInt();
+        int size = input.nextInt();
 
         for (int i = 0; i < size; ++i) {
             System.out.printf("Number [%d]: ", counter.get());
             temp = input.nextInt();
-            list.add(temp);
+            list.insert(temp);
             counter.getAndIncrement();
         }
 
@@ -36,22 +28,30 @@ public class InvertedList {
         System.out.println(list.toString());
     }
 
-    public static void invert(LinkList lt) {
+    private static void invert(LinkList<Integer> lt) {
+        String text = lt.toString();
+        StringBuilder x = new StringBuilder();
 
-        // WIP
-/*
-        int arr[] = new int[size];
-        int a = 1;
+        x.append(text);
+        text = (x).reverse().toString();
+        x.setLength(0);
 
-        int i = 0, j = size - 1;
-        while (i < j) {
-            int tmp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = tmp;
-            ++i;
-            --j;
+        lt.doEmpty();
+
+        for (int i = 0; i < text.length(); ++i) {
+            if ((text.charAt(i) == ('0')) || (text.charAt(i) == ('1')) ||
+                    (text.charAt(i) == ('2')) || (text.charAt(i) == ('3')) ||
+                    (text.charAt(i) == ('4')) || (text.charAt(i) == ('5')) ||
+                    (text.charAt(i) == ('6')) || (text.charAt(i) == ('7')) ||
+                    (text.charAt(i) == ('8')) || (text.charAt(i) == ('9'))) {
+                x.append(text.charAt(i));
+            } else if (text.charAt(i) == (' ')) {
+                lt.insert(Integer.parseInt(x.toString()));
+                x.setLength(0);
+            } else {
+                System.out.println("ERROR - Invalid String Input");
+            }
         }
-        return lt;
-*/
+        lt.insert(Integer.parseInt(x.toString()));
     }
 }
